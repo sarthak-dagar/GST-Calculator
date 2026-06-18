@@ -1,9 +1,14 @@
-function formatIndianNumber(value) {
-  const [integerPart, decimalPart] = Number(value).toFixed(2).split('.');
-  const firstGroup = integerPart.slice(-3);
-  const otherGroups = integerPart.slice(0, -3);
+function formatIndianNumberString(valueString) {
+  const [integerPart = '', decimalPart] = valueString.toString().split('.');
+  const trimmedInteger = integerPart.replace(/^0+(?=\d)/, '') || '0';
+  const firstGroup = trimmedInteger.slice(-3);
+  const otherGroups = trimmedInteger.slice(0, -3);
   const formattedOther = otherGroups ? otherGroups.replace(/\B(?=(\d{2})+(?!\d))/g, ',') + ',' : '';
-  return `${formattedOther}${firstGroup}${decimalPart ? '.' + decimalPart : ''}`;
+  return decimalPart !== undefined ? `${formattedOther}${firstGroup}.${decimalPart}` : `${formattedOther}${firstGroup}`;
+}
+
+function formatIndianNumber(value) {
+  return formatIndianNumberString(Number(value).toFixed(2));
 }
 
 function parseIndianNumber(value) {
@@ -36,10 +41,11 @@ const amountInput = document.getElementById('amount');
 function formatInputValue(input) {
   const cursorPosition = input.selectionStart;
   const rawValue = input.value.replace(/,/g, '');
-  const [integerPart, decimalPart] = rawValue.split('.');
-  const formattedInteger = integerPart ? integerPart.replace(/\B(?=(\d{2})+(?!\d))/g, ',') : '';
-  const formattedValue = decimalPart !== undefined ? `${formattedInteger}.${decimalPart}` : formattedInteger;
+  if (rawValue === '' || rawValue === '.') return;
 
+  const [integerPart, decimalPart] = rawValue.split('.');
+  const formattedInteger = formatIndianNumberString(integerPart);
+  const formattedValue = decimalPart !== undefined ? `${formattedInteger}.${decimalPart}` : formattedInteger;
   input.value = formattedValue;
 
   if (cursorPosition !== null) {
@@ -61,7 +67,7 @@ amountInput.addEventListener('blur', () => {
   const value = amountInput.value.replace(/,/g, '');
   const numeric = parseFloat(value);
   if (!isNaN(numeric)) {
-    amountInput.value = formatIndianNumber(numeric);
+    amountInput.value = formatIndianNumberString(value);
   }
 });
 
