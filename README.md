@@ -28,4 +28,4 @@ A clean, responsive web app for calculating GST and the final amount for an ente
 ## Notes
 
 - Amount input is formatted using Indian number grouping while typing and on blur.
-- The app is built for learning and quick GST estimation.
+- The app is built for learning and quick GST estimation.      
