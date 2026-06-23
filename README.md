@@ -1,31 +1,33 @@
 # GST Calculator
 
-A clean, responsive web app for calculating GST and the final amount for an entered value.
+A simple Indian GST calculator web app that computes GST and the final total amount for a given amount.
 
 ## Features
 
-- Calculates GST at 5%, 12%, 18%, and 28%
-- Shows GST amount and total amount instantly
-- Supports Indian-style number formatting for the amount input
-- Validates input and alerts when the amount is invalid
-- Includes a branded footer and external link
+- Calculates GST for 5%, 12%, 18%, and 28%
+- Displays both GST amount and total amount
+- Formats amount input with Indian numbering style (commas in the right places)
+- Validates the amount and shows an alert for invalid input
+- Clean responsive layout with a branded footer and external link
 
-## Usage
+## How to use
 
-1. Open `index.html` in a browser.
-2. Enter the amount in the input field.
-3. Select the desired GST rate from the dropdown.
-4. Click `Calculate`.
-5. View the calculated GST amount and total amount below.
+1. Open `index.html` in your browser.
+2. Enter the amount in the `₹ Amount` field.
+3. Choose a GST rate from the dropdown menu.
+4. Click the `Calculate` button.
+5. The GST amount and total amount appear below the button.
 
-## Project structure
+## Project files
 
-- `index.html` — HTML layout and form controls
-- `style.css` — responsive styling and layout
-- `script.js` — GST calculation, input formatting, and validation logic
-- `README.md` — project overview and usage instructions
+- `index.html` — page layout and form elements
+- `style.css` — responsive styling and presentation
+- `script.js` — GST calculation and Indian number formatting logic
+- `README.md` — project overview and instructions
 
 ## Notes
 
-- Amount input is formatted using Indian number grouping while typing and on blur.    
-- The app is built for learning and quick GST estimation.      
+- The amount input is formatted with commas while typing and again on blur.
+- Clicking the `Calculate` button performs GST calculation only when a valid amount is entered.
+- The app is intended for quick GST estimation and educational use.
+
