@@ -23,11 +23,11 @@ If you prefer serving the files via a local web server (recommended for some bro
 # Python 3
 python -m http.server 8000
 
-# or, with Node.js (if you have http-server installed)
+# or, with Node.js (if you have http-server installed)      
 npx http-server -c-1
 ```
 
-Then open `http://localhost:8000` in your browser.
+Then open `http://localhost:8000` in your browser.     
 
 **Project structure**
 
