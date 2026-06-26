@@ -42,7 +42,7 @@ Then open `http://localhost:8000` in your browser.
 
 **Contributing**
 
-Small improvements, bug reports, or formatting fixes are welcome — open a PR or edit the files directly.
+Small improvements, bug reports, or formatting fixes are welcome — open a PR or edit the files directly.     
 
 **License**
 
