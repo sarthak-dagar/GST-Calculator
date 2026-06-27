@@ -1,51 +1,57 @@
 # GST Calculator
 
-A small, client-side web app for quickly estimating Indian GST (Goods and Services Tax) on an amount. It shows the GST amount and the final total.
+A simple, client-side web app for calculating Indian GST (Goods and Services Tax) on an entered amount. The app displays the GST amount and the final total instantly.
 
-**Features**
+## Features
 
-- Calculates GST for 5%, 12%, 18%, and 28%.
-- Displays both the GST amount and the final total amount.
-- Formats input using the Indian numbering system (commas inserted appropriately).
-- Validates input and provides user-friendly feedback.
-- Responsive, minimal UI suitable for desktop and mobile.
+- Calculates GST for standard Indian rates: 5%, 12%, 18%, and 28%
+- Shows both the GST amount and the total amount including GST
+- Formats the entered amount using the Indian numbering system
+- Validates input and displays friendly error messages for invalid values
+- Responsive layout for desktop and mobile screens
+- Works entirely in the browser with no backend required
 
-**Quick start**
+## Usage
 
 1. Open [index.html](index.html) in your browser.
-2. Enter an amount in the Amount field.
-3. Select a GST percentage from the dropdown.
-4. Click the Calculate button to see the GST and total.
+2. Enter an amount in the **Amount** field.
+3. Select a GST percentage from the dropdown menu.
+4. Click **Calculate**.
+5. View the calculated GST amount and final total.
 
-If you prefer serving the files via a local web server (recommended for some browsers), run one of these from the project folder:
+### Example
+
+- Input: `1000`
+- GST rate: `18%`
+- Output: `GST amount: ₹180.00`, `Total: ₹1,180.00`
+
+## Running Locally
+
+For the best experience in modern browsers, serve the files from a local web server.
 
 ```bash
 # Python 3
 python -m http.server 8000
 
-# or, with Node.js (if you have http-server installed)      
+# Node.js (if http-server is installed)
 npx http-server -c-1
 ```
 
-Then open `http://localhost:8000` in your browser.     
+Then open `http://localhost:8000` in your browser.
 
-**Project structure**
+## Project Files
 
-- [index.html](index.html) — page layout and form elements
-- [style.css](style.css) — styling and responsive layout
-- [script.js](script.js) — GST calculation logic and input formatting
-- [README.md](README.md) — this file
+- `index.html` — HTML layout and form structure
+- `style.css` — styling and responsive design
+- `script.js` — GST calculation and input formatting logic
+- `README.md` — project documentation
 
-**Usage example**
+## Contributing
 
-1. Enter `1000` and select `18%` → GST amount: `₹180.00`, Total: `₹1,180.00`.
+Contributions are welcome. Open an issue or submit a pull request for bug fixes, enhancements, or documentation improvements.
 
-**Contributing**
+## License
 
-Small improvements, bug reports, or formatting fixes are welcome — open a PR or edit the files directly.     
-
-**License**
-
-This project is provided for educational/demo use. No license is specified.
+This project is provided for educational/demo use. No explicit license is included.
 
 
