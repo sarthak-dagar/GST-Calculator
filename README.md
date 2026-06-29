@@ -41,9 +41,9 @@ Then open `http://localhost:8000` in your browser.
 
 ## Project Files
 
-- `index.html` — HTML layout and form structure
+- `index.html` — HTML layout and form structure      
 - `style.css` — styling and responsive design
-- `script.js` — GST calculation and input formatting logic         
+- `script.js` — GST calculation and input formatting logic                       
 - `README.md` — project documentation
 
 ## Contributing
