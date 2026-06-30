@@ -48,6 +48,29 @@ Then open `http://localhost:8000` in your browser.
 
 ## Contributing
 
+Contributions are welcome! If you'd like to improve this project, please:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Make your changes and commit them (`git commit -m 'Add improvement'`)
+4. Push to the branch (`git push origin feature/improvement`)
+5. Open a Pull Request
+
+Feel free to report bugs or suggest enhancements by opening an issue.
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Author
+
+**Sarthak Dagar**  
+Email: [sarthakdagar77@gmail.com](mailto:sarthakdagar77@gmail.com)
+
+---
+
+Built with ❤️ for [Digital Heroes](https://digitalheroesco.com)
+
 Contributions are welcome. Open an issue or submit a pull request for bug fixes, enhancements, or documentation improvements.
 
 ## License
